@@ -105,28 +105,3 @@
 #     x=len(s)
 #     x=x//2
 #     print(s[:x:])
-
-'''
-        LICZBY PIERWSZE
-'''
-# def pierw(n):
-#     if n == 0 or n == 1:
-#         return 'NIE';
-#     elif n == 2:
-#         return 'TAK'
-#     elif n % 2 == 0:
-#         return 'NIE'
-#     else:
-#         wynik = 'TAK'
-#         i = 3
-#         while i * i <= n:
-#             if n % i == 0:
-#                 wynik = 'NIE'
-#                 break
-#             i = i + 2
-#         return wynik
-# 
-# for i in range(1000):
-#     n = int(input())
-# 
-#     print(pierw(n))
