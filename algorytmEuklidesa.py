@@ -16,3 +16,15 @@
         0             a=60   |   b=84
                             b-a
 '''
+
+a,b=map(int,input().split())
+
+def nwd(a,b):
+    while a != b:
+        if a > b:
+            a -= b
+        else:
+            b -= a
+    return a
+
+print(nwd(a,b))
