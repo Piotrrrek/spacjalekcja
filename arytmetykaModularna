@@ -1,0 +1,10 @@
+'''
+        ARYTMETYKA MODULARNA
+        234**567890    
+        # WYSOKIE POTĘGI
+'''
+a,n=map(int,input().split())
+w=1
+for i in range(n):
+    w=(w*a)%1000
+print(w)
