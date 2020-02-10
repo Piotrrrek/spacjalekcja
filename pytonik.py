@@ -347,21 +347,35 @@
 '''
         POLE WIELOKĄTA
 '''
-n=int(input())
-X=[]
-Y=[]
-p=0
+# n=int(input())
+# X=[]
+# Y=[]
+# p=0
 
-for i in range (n):
-    x_temp,y_temp=map(float,input().split())
-    X.append(x_temp)
-    Y.append(y_temp)
+# for i in range (n):
+#     x_temp,y_temp=map(float,input().split())
+#     X.append(x_temp)
+#     Y.append(y_temp)
 
-for i2 in range (n):
-    p=p+X[i-1]*Y[i]-X[i]*Y[i-1]
+# for i2 in range (n):
+#     p=p+X[i-1]*Y[i]-X[i]*Y[i-1]
 
-if p<0:
-    p=-p
+# if p<0:
+#     p=-p
 
-p=p/2
-print(p)
+# p=p/2
+# print(p)
+'''
+        WSPÓŁLINIOWOŚĆ PUNKTÓW
+'''
+# xA,yA=map(int,input().split())
+# xB,yB=map(int,input().split())
+# xC,yC=map(int,input().split())
+
+# def w(x1,y1,x2,y2,x3,y3):
+#     return x1*y2+x2*y3+x3*y1-x3*y2-x1*y3-x2*y1
+
+# if w(xA,yA,xB,yB,xC,yC)==0:
+#     print('TAK')
+# else:
+#     print('NIE')
