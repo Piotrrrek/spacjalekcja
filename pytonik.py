@@ -379,3 +379,22 @@
 #     print('TAK')
 # else:
 #     print('NIE')
+'''
+        NAJBLIŻSZY PUNKT
+'''
+# import math
+
+# a,b,c=map(float,input().split())
+# n=int(input())
+# x_nb,y_nb=map(int,input().split())
+# d_min=(abs(a*x_nb+b*y_nb+c))/math.sqrt((a*a)+(b*b))
+
+# for i in range(n-1):
+#     x,y=map(int,input().split())
+#     d=(abs(a*x+b*y+c))/math.sqrt((a*a)+(b*b))
+#     if d<d_min:
+#         d_min=d
+#         x_nb=x
+#         y_nb=y
+
+# print(x_nb, y_nb)
