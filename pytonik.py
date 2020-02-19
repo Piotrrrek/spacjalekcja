@@ -61,7 +61,6 @@
 #     if (pierw(i) == 'TAK'):
 #         print(i, pierw(i))
 #         # time.sleep(0.3)
-#
 '''
         ALGORYTM EUKLIDESA
         # NWD(84,60) = 2 * 2 * 3 = 12
@@ -83,9 +82,7 @@
                    |     a       dla  a=b
                     -
 '''
-#
 # a, b = map(int, input().split())
-#
 #
 # def nwdi(a, b):
 #     while a != b:
@@ -95,7 +92,6 @@
 #         else:
 #             b -= a
 #     return a
-#
 #
 # def nwd(a, b):
 #     while b:
@@ -109,7 +105,6 @@
         234**567890    
         # WYSOKIE POTĘGI
 '''
-#
 # a,n=map(int,input().split())
 # w=1
 # for i in range(n):
@@ -124,7 +119,6 @@
 #
 # w=pot_rek(a,n)
 # print(w)
-
 '''               __________________________________________
                  |                                          |
                 |  1 dla n=0                                |
@@ -145,7 +139,6 @@
 #         p=pot_rek(a, n // 2, d)
 #         return (p*p)%d
 # print(pot_rek(a,n,d))
-
 '''
         RESZTA Z DZIELENIA
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -160,19 +153,15 @@
         20=3*6+2
 
 '''
-#
 # d=int(input())
 #
 # for i in range (d):
 #     a,b=map(int,input().split())
 #     r=a%b
 #     print(r)
-#
 '''
         OBLICZANIE PIERWIASTKA KWADRATOWEGO METODĄ Newtona-Raphsona
 '''
-#
-#
 # def pierwiastek(a, p):
 #     x = a / 2
 #     while -p > a / x - x or a / x - x > p:
@@ -181,14 +170,12 @@
 #         print(x)
 #     return x
 #
-#
 # def pieerwiastek(a):
 #     x = a / 2
 #     d = 0.00000001
 #     while (x - a / x < -d) or (x - a / x > d):
 #         x = (x + a / x) / 2
 #     return x
-#
 #
 # a,p=map(float, input().split())
 # a = float(input())
@@ -232,10 +219,8 @@
 '''
 # xp, xk = map(float, input().split())
 #
-#
 # def f(x):
 #     return x * x
-#
 #
 # def pole_mp(xp, xk, n):
 #     sz = (xk - xp) / n
@@ -249,7 +234,6 @@
 #         y2 = f(x2)
 #         P = P + sz * y1
 #     return P
-#
 #
 # def pole_mt(xp, xk, n):
 #     sz = (xk - xp) / n
@@ -276,7 +260,6 @@
 #         y2 = f(x2)
 #         P = P +(y0+4*y1+y2)*sz / 6
 #     return P
-#
 #
 # print(pole_mp(xp, xk, 100))
 # print(pole_mt(xp, xk, 100))
@@ -328,10 +311,8 @@
 # a, b, c, d = map(float, input().split())
 # xp, xk = map(float, input().split())
 #
-#
 # def f(a, b, c, d, x):
 #     return a * x * x * x + b * x * x + c * x + d
-#
 #
 # def miejsce_zerowe(a, b, c, d, xp, xk):
 #     xs = (xp + xk) / 2
@@ -342,7 +323,6 @@
 #     else:
 #         return miejsce_zerowe(a, b, c, d, xs, xk)
 #
-#
 # print(miejsce_zerowe(a, b, c, d, xp, xk))
 '''
         POLE WIELOKĄTA
@@ -351,30 +331,43 @@
 # X=[]
 # Y=[]
 # p=0
-
+#
 # for i in range (n):
 #     x_temp,y_temp=map(float,input().split())
 #     X.append(x_temp)
 #     Y.append(y_temp)
-
+#
 # for i2 in range (n):
 #     p=p+X[i-1]*Y[i]-X[i]*Y[i-1]
-
+#
 # if p<0:
 #     p=-p
-
+#
 # p=p/2
 # print(p)
 '''
         WSPÓŁLINIOWOŚĆ PUNKTÓW
 '''
-# xA,yA=map(int,input().split())
-# xB,yB=map(int,input().split())
-# xC,yC=map(int,input().split())
-
+# xA,yA,xB,yB,xC,yC,xD,yD=map(float,input().split())
+# xB,yB=map(float,input().split())
+# xC,yC=map(float,input().split())
+# xD,yD=map(float,input().split())
+#
 # def w(x1,y1,x2,y2,x3,y3):
 #     return x1*y2+x2*y3+x3*y1-x3*y2-x1*y3-x2*y1
-
+#
+# if (w(xA,yA,xB,yB,xC,yC)*w(xA,yA,xB,yB,xD,yD))<0 and (w(xC,yC,xD,yD,xA,yA)*w(xC,yC,xD,yD,xB,yB))<0:
+#     print('TAK')
+# else:
+#     print('NIE')
+#
+# if w(xA,yA,xB,yB,xC,yC)>0:
+#     print('W LEWO')
+# elif w(xA,yA,xB,yB,xC,yC)==0:
+#     print('PROSTO')
+# else:
+#     print('W PRAWO')
+#
 # if w(xA,yA,xB,yB,xC,yC)==0:
 #     print('TAK')
 # else:
@@ -383,12 +376,12 @@
         NAJBLIŻSZY PUNKT
 '''
 # import math
-
+#
 # a,b,c=map(float,input().split())
 # n=int(input())
 # x_nb,y_nb=map(int,input().split())
 # d_min=(abs(a*x_nb+b*y_nb+c))/math.sqrt((a*a)+(b*b))
-
+#
 # for i in range(n-1):
 #     x,y=map(int,input().split())
 #     d=(abs(a*x+b*y+c))/math.sqrt((a*a)+(b*b))
@@ -396,5 +389,63 @@
 #         d_min=d
 #         x_nb=x
 #         y_nb=y
-
+#
 # print(x_nb, y_nb)
+'''
+   v2
+'''
+# import math
+#
+# X = []
+# Y = []
+#
+# n = int(input())
+# for i in range(n):
+#     x, y = map(int, input().split())
+#     X.append(x)
+#     Y.append(y)
+#
+# a, b, c = map(float, input().split())
+#
+# d_min = (abs(a * X[0] + b * Y[0] + c)) / math.sqrt((a * a) + (b * b))
+# x_nb = X[0]
+# y_nb = Y[0]
+# for i in range(1, n - 1):
+#     d = (abs(a * x + b * y + c)) / math.sqrt((a * a) + (b * b))
+#     if d < d_min:
+#         d_min = d
+#         x_nb = X[i]
+#         y_nb = Y[i]
+#
+# print(x_nb, y_nb)
+'''
+        SORTOWANIE PRZEZ WYBIERANIE
+'''
+# n = int(input())
+# T = list(map(int, input().split()))
+# pom = T[0]
+#
+# for i in range(0, n - 1):
+#     nr_min = i
+#     for j in range(i + 1, n):
+#         if T[j] < T[nr_min]:
+#             pom = T[j]
+#             T[j] = T[nr_min]
+#             T[nr_min] = pom
+#
+# print(T)
+'''
+        SORTOWANIE BOMBELKOWE
+'''
+n = int(input())
+T = list(map(int, input().split()))
+
+for i in range (n):
+    # sort=False
+    for j in range(0,n-i-1):
+        if(T[j]>T[j+1]):
+            T[j],T[j+1]=T[j+1],T[j]
+    #         sort=True
+    # if(sort==False):
+    #     break
+print(T) 
